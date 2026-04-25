@@ -87,3 +87,15 @@ If you already `cd` into `examples/traffic_signal_control`, use the short filena
 ## License
 
 See the upstream `LICENSE` / `pyproject.toml` (Apache-2.0) unless you add a separate `LICENSE` for this fork.
+
+## 📖 Citation
+
+```bibtex
+@article{wang2025evolvesignal,
+  title={EvolveSignal: A Large Language Model Powered Coding Agent for Discovering Traffic Signal Control Algorithms},
+  author={Wang, Leizhen and Duan, Peibo and Wang, Hao and Wang, Yue and Xu, Jian and Zheng, Nan and Ma, Zhenliang},
+  journal={arXiv preprint arXiv:2509.03335},
+  year={2025}
+}
+```
+
