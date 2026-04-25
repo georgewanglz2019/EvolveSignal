@@ -1,0 +1,28 @@
+# Current Program Information
+- Current performance metrics: {metrics}
+- Areas identified for improvement: {improvement_areas}
+
+{artifacts}
+
+# Program Evolution History
+{evolution_history}
+
+# Current Program
+```{language}
+{current_program}
+```
+
+# Task
+You may apply any reasonable strategy to optimize the algorithm, including:  
+-Traffic engineering principles (e.g., flow ratio balancing, critical movement analysis, checking whether timing constraints affect the intended signal plan, and addressing them with or without iteration)  
+-Rule-based or logic-driven heuristics (e.g., condition-based phase time adjustments, logic-driven overrides)
+-Hyperparameter tuning (e.g., changing cycle_length_min, cycle_length_max, saturation flow values, or key control thresholds that influence timing calculations)
+-Ideas inspired by other domains (e.g., task scheduling, resource allocation, control theory)
+-Lightweight refinements (e.g., bottleneck-priority tuning, small rule-based refinements that require low implementation effort)
+Randomly select one strategy category from the list above. Then, under that strategy, provide the complete new program code.
+
+IMPORTANT: Make sure your rewritten program maintains the same inputs and outputs as the original program, but with improved internal implementation.
+
+```{language}
+# Your rewritten program here
+```

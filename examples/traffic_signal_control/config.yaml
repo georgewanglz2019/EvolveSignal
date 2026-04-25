@@ -1,0 +1,53 @@
+# Configuration for function minimization example
+max_iterations: 600
+checkpoint_interval: 10
+log_level: "INFO"
+random_seed: 42
+
+# LLM configuration
+llm:
+  models:
+    [
+      {"name": "deepseek/deepseek-chat-v3-0324", "weight": 0.2, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "deepseek/deepseek-r1-0528", "weight": 0.1, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "qwen/qwen3-coder", "weight": 0., api_base: "https://openrouter.ai/api/v1"},
+      {"name": "qwen/qwen3-235b-a22b-2507", "weight": 0., api_base: "https://openrouter.ai/api/v1"},
+      {"name": "anthropic/claude-sonnet-4", "weight": 0.2, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "openai/gpt-4o", "weight": 0.1, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "openai/o4-mini-high", "weight": 0.3, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "openai/o3", "weight": 0.1, api_base: "https://openrouter.ai/api/v1"},
+      {"name": "google/gemini-2.5-flash", "weight": 0., api_base: "https://openrouter.ai/api/v1"},
+      {"name": "google/gemini-2.5-pro", "weight": 0., api_base: "https://openrouter.ai/api/v1"}
+    ]
+
+  api_base: "https://openrouter.ai/api/v1"
+
+  temperature: 0.6
+  top_p: 0.95
+  max_tokens: 8192
+
+# Prompt configuration
+prompt:
+  num_top_programs: 5
+  use_template_stochasticity: true
+  template_dir: "Prompt_Templates"
+
+# Database configuration
+database:
+  population_size: 50
+  archive_size: 20
+  num_islands: 5
+  elite_selection_ratio: 0.2
+  exploitation_ratio: 0.7
+
+# Evaluator configuration
+evaluator:
+  timeout: 400
+  cascade_evaluation: true
+  cascade_thresholds: [0.5, 0.75]
+  parallel_evaluations: 5
+  use_llm_feedback: false
+
+# Evolution settings
+diff_based_evolution: true
+allow_full_rewrites: false

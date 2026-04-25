@@ -1,0 +1,49 @@
+# Current Program Information
+- Current performance metrics: {metrics}
+- Areas identified for improvement: {improvement_areas}
+
+{artifacts}
+
+# Program Evolution History
+{evolution_history}
+
+# Current Program
+```{language}
+{current_program}
+```
+
+# Task
+You may apply any reasonable strategy to optimize the algorithm, including:  
+-Traffic engineering principles (e.g., flow ratio balancing, critical movement analysis, checking whether timing constraints affect the intended signal plan, and addressing them with or without iteration)  
+-Rule-based or logic-driven heuristics (e.g., condition-based phase time adjustments, logic-driven overrides)
+-Hyperparameter tuning (e.g., changing cycle_length_min, cycle_length_max, saturation flow values, or key control thresholds that influence timing calculations)
+-Ideas inspired by other domains (e.g., task scheduling, resource allocation, control theory)
+-Lightweight refinements (e.g., bottleneck-priority tuning, small rule-based refinements that require low implementation effort)
+Randomly select one strategy category from the list above. Then, under that strategy, propose one to two specific changes that are most likely to improve the algorithm's performance.
+
+You MUST use the exact SEARCH/REPLACE diff format shown below to indicate changes:
+
+<<<<<<< SEARCH
+# Original code to find and replace (must match exactly)
+=======
+# New replacement code
+>>>>>>> REPLACE
+
+Example of valid diff format:
+<<<<<<< SEARCH
+for i in range(m):
+    for j in range(p):
+        for k in range(n):
+            C[i, j] += A[i, k] * B[k, j]
+=======
+# Reorder loops for better memory access pattern
+for i in range(m):
+    for k in range(n):
+        for j in range(p):
+            C[i, j] += A[i, k] * B[k, j]
+>>>>>>> REPLACE
+
+You can suggest one to two changes, they should be mutually supportive or at least non-conflicting.
+Each SEARCH section must exactly match code in the current program. Be thoughtful about your changes and explain your reasoning thoroughly.
+
+IMPORTANT: Do not rewrite the entire program - focus on targeted improvements.

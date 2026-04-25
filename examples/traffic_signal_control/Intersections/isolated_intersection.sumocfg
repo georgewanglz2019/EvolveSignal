@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="isolated_intersection.net.xml"/>
+        <route-files value="isolated_routes.rou.xml"/>
+    </input>
+
+    <time>
+      <begin value="0"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+		<collision.action value="remove"/>
+    </processing>
+	
+	<gui_only>
+        <gui-settings-file value="visual_settings.xml"/>
+		<quit-on-end value="False"/>
+		<delay value="20"/>
+    </gui_only>
+	
+	<report>
+        <no-warnings value="True"/>
+    </report>
+	
+
+
+</configuration>
